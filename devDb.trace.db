@@ -2534,3 +2534,15 @@ org.h2.jdbc.JdbcSQLException: Feature not supported: "isWrapperFor" [50100-176]
 12-01 18:21:24 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO ALUNO (CPF, VERSION, ARGM_CLASSF, NOME_ESTUDANTE, PERIODO_INGRESSO, SEXO, TIPO_INGRESSO, TURNO) VALUES (9, 0, 10.0,[*] ’TESTE', ’teste', ‘M', 'TESTE', ’teste') "; SQL statement:
 insert into aluno (cpf, version, argm_classf, nome_estudante, periodo_ingresso, sexo, tipo_ingresso, turno) values (9, 0, 10.0, ’teste', ’teste', ‘m', 'teste', ’teste') [42000-176]
+01-19 15:22:08 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "SHIRO_ROLE_PERMISSIONS" not found; SQL statement:
+alter table shiro_role_permissions drop constraint FK_e59mk07m63mbbdcj23gu50ncq if exists [42102-176]
+01-19 15:22:08 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "SHIRO_USER_PERMISSIONS" not found; SQL statement:
+alter table shiro_user_permissions drop constraint FK_5rrok5vgsofo9fst3l53tkx8m if exists [42102-176]
+01-19 15:22:08 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "SHIRO_USER_ROLES" not found; SQL statement:
+alter table shiro_user_roles drop constraint FK_gcsy8p8yioss6r3hr8ba2ggtn if exists [42102-176]
+01-19 15:22:08 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "SHIRO_USER_ROLES" not found; SQL statement:
+alter table shiro_user_roles drop constraint FK_c16m7rr368sdh1l6xkb2001y5 if exists [42102-176]
