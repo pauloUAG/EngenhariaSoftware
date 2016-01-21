@@ -21,6 +21,6 @@ class AlunoNewPage extends Page {
 		$ ("form").nomeEstudante = name
 		$ ("form").cpf = cpfAluno
 
-		save.click ()
+		save.click()
 	}
 }

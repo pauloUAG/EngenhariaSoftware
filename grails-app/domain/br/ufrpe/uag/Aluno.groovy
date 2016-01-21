@@ -20,7 +20,7 @@ class Aluno {
 		argmClassf blank: true, nullable: true
 	}
 
-	static mapping = { id name: 'cpf' }
+	static mapping = { id generator: 'increment' }
 
 	static hasMany = [estatisticas : Estatistica, periodos : Periodo]
 }
