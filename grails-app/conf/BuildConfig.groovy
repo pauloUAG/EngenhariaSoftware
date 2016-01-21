@@ -51,8 +51,8 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.29'
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0.2-grails-2.4"
-		test "org.seleniumhq.selenium:selenium-support:2.31.0"
-		test "org.seleniumhq.selenium:selenium-firefox-driver:2.31.0"
+		test "org.seleniumhq.selenium:selenium-support:2.46.0"
+		test "org.seleniumhq.selenium:selenium-firefox-driver:2.46.0"
 		test "org.codehaus.geb:geb-junit4:0.7.2"
     }
 
