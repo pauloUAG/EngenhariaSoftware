@@ -24,17 +24,17 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="argmClassf" title="${message(code: 'aluno.argmClassf.label', default: 'Argm Classf')}" />
-					
 						<g:sortableColumn property="cpf" title="${message(code: 'aluno.cpf.label', default: 'Cpf')}" />
 					
 						<g:sortableColumn property="nomeEstudante" title="${message(code: 'aluno.nomeEstudante.label', default: 'Nome Estudante')}" />
 					
-						<g:sortableColumn property="periodoIngresso" title="${message(code: 'aluno.periodoIngresso.label', default: 'Periodo Ingresso')}" />
-					
 						<g:sortableColumn property="sexo" title="${message(code: 'aluno.sexo.label', default: 'Sexo')}" />
 					
 						<g:sortableColumn property="tipoIngresso" title="${message(code: 'aluno.tipoIngresso.label', default: 'Tipo Ingresso')}" />
+					
+						<g:sortableColumn property="periodoIngresso" title="${message(code: 'aluno.periodoIngresso.label', default: 'Periodo Ingresso')}" />
+					
+						<g:sortableColumn property="turno" title="${message(code: 'aluno.turno.label', default: 'Turno')}" />
 					
 					</tr>
 				</thead>
@@ -42,17 +42,17 @@
 				<g:each in="${alunoInstanceList}" status="i" var="alunoInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${alunoInstance.id}">${fieldValue(bean: alunoInstance, field: "argmClassf")}</g:link></td>
-					
-						<td>${fieldValue(bean: alunoInstance, field: "cpf")}</td>
+						<td><g:link action="show" id="${alunoInstance.id}">${fieldValue(bean: alunoInstance, field: "cpf")}</g:link></td>
 					
 						<td>${fieldValue(bean: alunoInstance, field: "nomeEstudante")}</td>
-					
-						<td>${fieldValue(bean: alunoInstance, field: "periodoIngresso")}</td>
 					
 						<td>${fieldValue(bean: alunoInstance, field: "sexo")}</td>
 					
 						<td>${fieldValue(bean: alunoInstance, field: "tipoIngresso")}</td>
+					
+						<td>${fieldValue(bean: alunoInstance, field: "periodoIngresso")}</td>
+					
+						<td>${fieldValue(bean: alunoInstance, field: "turno")}</td>
 					
 					</tr>
 				</g:each>

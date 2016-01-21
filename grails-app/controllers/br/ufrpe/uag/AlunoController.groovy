@@ -40,7 +40,7 @@ class AlunoController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'aluno.label', default: 'Aluno'), alunoInstance.id])
-                redirect id: alunoInstance.cpf
+                redirect alunoInstance
             }
             '*' { respond alunoInstance, [status: CREATED] }
         }

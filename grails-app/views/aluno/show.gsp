@@ -23,15 +23,6 @@
 			</g:if>
 			<ol class="property-list aluno">
 			
-				<g:if test="${alunoInstance?.argmClassf}">
-				<li class="fieldcontain">
-					<span id="argmClassf-label" class="property-label"><g:message code="aluno.argmClassf.label" default="Argm Classf" /></span>
-					
-						<span class="property-value" aria-labelledby="argmClassf-label"><g:fieldValue bean="${alunoInstance}" field="argmClassf"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${alunoInstance?.cpf}">
 				<li class="fieldcontain">
 					<span id="cpf-label" class="property-label"><g:message code="aluno.cpf.label" default="Cpf" /></span>
@@ -41,42 +32,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${alunoInstance?.estatisticas}">
-				<li class="fieldcontain">
-					<span id="estatisticas-label" class="property-label"><g:message code="aluno.estatisticas.label" default="Estatisticas" /></span>
-					
-						<g:each in="${alunoInstance.estatisticas}" var="e">
-						<span class="property-value" aria-labelledby="estatisticas-label"><g:link controller="estatistica" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${alunoInstance?.nomeEstudante}">
 				<li class="fieldcontain">
 					<span id="nomeEstudante-label" class="property-label"><g:message code="aluno.nomeEstudante.label" default="Nome Estudante" /></span>
 					
 						<span class="property-value" aria-labelledby="nomeEstudante-label"><g:fieldValue bean="${alunoInstance}" field="nomeEstudante"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${alunoInstance?.periodoIngresso}">
-				<li class="fieldcontain">
-					<span id="periodoIngresso-label" class="property-label"><g:message code="aluno.periodoIngresso.label" default="Periodo Ingresso" /></span>
-					
-						<span class="property-value" aria-labelledby="periodoIngresso-label"><g:fieldValue bean="${alunoInstance}" field="periodoIngresso"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${alunoInstance?.periodos}">
-				<li class="fieldcontain">
-					<span id="periodos-label" class="property-label"><g:message code="aluno.periodos.label" default="Periodos" /></span>
-					
-						<g:each in="${alunoInstance.periodos}" var="p">
-						<span class="property-value" aria-labelledby="periodos-label"><g:link controller="periodo" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></span>
-						</g:each>
 					
 				</li>
 				</g:if>
@@ -99,11 +59,51 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${alunoInstance?.periodoIngresso}">
+				<li class="fieldcontain">
+					<span id="periodoIngresso-label" class="property-label"><g:message code="aluno.periodoIngresso.label" default="Periodo Ingresso" /></span>
+					
+						<span class="property-value" aria-labelledby="periodoIngresso-label"><g:fieldValue bean="${alunoInstance}" field="periodoIngresso"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${alunoInstance?.turno}">
 				<li class="fieldcontain">
 					<span id="turno-label" class="property-label"><g:message code="aluno.turno.label" default="Turno" /></span>
 					
 						<span class="property-value" aria-labelledby="turno-label"><g:fieldValue bean="${alunoInstance}" field="turno"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${alunoInstance?.argmClassf}">
+				<li class="fieldcontain">
+					<span id="argmClassf-label" class="property-label"><g:message code="aluno.argmClassf.label" default="Argm Classf" /></span>
+					
+						<span class="property-value" aria-labelledby="argmClassf-label"><g:fieldValue bean="${alunoInstance}" field="argmClassf"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${alunoInstance?.estatisticas}">
+				<li class="fieldcontain">
+					<span id="estatisticas-label" class="property-label"><g:message code="aluno.estatisticas.label" default="Estatisticas" /></span>
+					
+						<g:each in="${alunoInstance.estatisticas}" var="e">
+						<span class="property-value" aria-labelledby="estatisticas-label"><g:link controller="estatistica" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${alunoInstance?.periodos}">
+				<li class="fieldcontain">
+					<span id="periodos-label" class="property-label"><g:message code="aluno.periodos.label" default="Periodos" /></span>
+					
+						<g:each in="${alunoInstance.periodos}" var="p">
+						<span class="property-value" aria-labelledby="periodos-label"><g:link controller="periodo" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>

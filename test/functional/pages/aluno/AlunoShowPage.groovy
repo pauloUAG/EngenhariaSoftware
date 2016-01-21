@@ -6,16 +6,16 @@ import data.Data
 
 class AlunoShowPage extends Page {
 	static at = {
-		title ==~ /Mostrar Book/
+		title ==~ /Ver Aluno/
 	}
 
 	static content = {
 		row { val ->
-			$ ('span.property-label', text: val).parent ()  // grails 2.0
+			$ ('span.property-label', text: val).parent ()
 		}
 
 		value { val ->
-			row (val).find ('span.property-value').text ()  // grails 2.0
+			row (val).find ('span.property-value').text ()
 		}
 
 		nomeEstudante {
