@@ -24,3 +24,4 @@ class Aluno {
 
 	static hasMany = [estatisticas : Estatistica, periodos : Periodo]
 }
+

@@ -113,8 +113,8 @@ environments {
 
 // log4j configuration
 log4j.main = {
-	debug 'org.hibernate.SQL'
-	trace 'org.hibernate.type'
+	//debug 'org.hibernate.SQL'
+	//trace 'org.hibernate.type'
 
 	// Example of changing the log pattern for the default console appender:
 	//
