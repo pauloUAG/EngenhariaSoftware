@@ -4,7 +4,9 @@ import br.ufrpe.uag.Aluno
 import pages.aluno.AlunoListPage
 import pages.aluno.AlunoNewPage
 import pages.aluno.AlunoShowPage
+import data.Data
 
+// gui
 
 Given(~/^I open the aluno tracker$/) { ->
 	to AlunoListPage
@@ -18,4 +20,18 @@ When(~/^I create the aluno "([^"]*)" with cpf "([^"]*)"$/) { String name, String
 Then(~/^I see "([^"]*)" details$/) { String name ->
 	at AlunoShowPage
 	page.check(name)
+}
+
+// controller
+
+Given(~/^The system has an aluno named "([^"]*)"$/) { String nomeEstudante ->
+	def aluno = Data.findByName(nomeEstudante)
+	assert aluno != null
+}
+When(~/^I add the aluno "([^"]*)" with cpf "([^"]*)"$/) { String nomeEstudante, String cpf ->
+	Data.createAluno(nomeEstudante, cpf)
+}
+Then(~/^The aluno "([^"]*)" is not added twice$/) { String nomeEstudante ->
+	alunos = Aluno.findAllByNomeEstudante(nomeEstudante)
+	assert alunos.size() == 1
 }
