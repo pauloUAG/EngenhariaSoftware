@@ -23,6 +23,10 @@ grails.project.source.level = 1.6
 
 grails.project.dependency.resolver = "maven" // or ivy
 grails.project.dependency.resolution = {
+	
+	def gebVersion = "0.7.2"
+	def seleniumVersion = "2.46.0"
+	
     // inherit Grails' default dependencies
     inherits("global") {
         // specify dependency exclusions here; for example, uncomment this to disable ehcache:
@@ -51,9 +55,9 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.29'
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0.2-grails-2.4"
-		test "org.seleniumhq.selenium:selenium-support:2.46.0"
-		test "org.seleniumhq.selenium:selenium-firefox-driver:2.46.0"
-		test "org.codehaus.geb:geb-junit4:0.7.2"
+		test "org.seleniumhq.selenium:selenium-support:$seleniumVersion"
+		test "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
+		test "org.codehaus.geb:geb-junit4:$gebVersion"
     }
 
     plugins {
@@ -79,6 +83,6 @@ grails.project.dependency.resolution = {
 		//compile "org.grails.plugins:shiro:1.2.1"
 		compile "org.grails.plugins:cucumber:1.2.0"
 		test ":cucumber:1.2.0"
-		test ":geb:0.12.2"
+		test ":geb:$gebVersion"
     }
 }

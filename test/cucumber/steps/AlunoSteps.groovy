@@ -8,19 +8,19 @@ import data.Data
 
 // gui
 
-//Given(~/^I open the aluno tracker$/) { ->
-//	to AlunoListPage
-//	at AlunoListPage
-//}
-//When(~/^I create the aluno "([^"]*)" with cpf "([^"]*)"$/) { String name, String cpf ->
-//	page.toAlunoNewPage()
-//	at AlunoNewPage
-//	page.add(name, cpf)
-//}
-//Then(~/^I see "([^"]*)" details$/) { String name ->
-//	at AlunoShowPage
-//	page.check(name)
-//}
+Given(~/^I open the aluno tracker$/) { ->
+	to AlunoListPage
+	at AlunoListPage
+}
+When(~/^I create the aluno "([^"]*)" with cpf "([^"]*)"$/) { String name, String cpf ->
+	page.toAlunoNewPage()
+	at AlunoNewPage
+	page.add(name, cpf)
+}
+Then(~/^I see "([^"]*)" details$/) { String name ->
+	at AlunoShowPage
+	page.check(name)
+}
 
 // controller
 
