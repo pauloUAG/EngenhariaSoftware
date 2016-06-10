@@ -22,11 +22,10 @@ class Data {
 	}
 	
 	static public void createAluno(String name, cpfEstudante) {
-		def controller = new AlunoController()
-		controller.params << [nomeEstudante: name, cpf: cpfEstudante]
-		controller.request.setContent(new byte[1000])
-		controller.create()
-		controller.save()
-		controller.response.reset()
+		new Aluno(nomeEstudante: name, cpf: cpfEstudante).save(flush:true)
+	}
+	
+	static void clearAlunos() {
+		Aluno.findAll()*.delete(flush: true)
 	}
 }

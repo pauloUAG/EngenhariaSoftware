@@ -6,7 +6,7 @@ Feature: Aluno
 
 
 Scenario: add duplicated aluno (controller)
-	Given The system has an aluno named "Fulano da Silva Sauro"
+	Given The system has an aluno named "Fulano da Silva Sauro" with cpf "059.123.543-67"
 	When I add the aluno "Fulano da Silva Sauro" with cpf "059.123.543-67"
 	Then The aluno "Fulano da Silva Sauro" is not added twice
 	

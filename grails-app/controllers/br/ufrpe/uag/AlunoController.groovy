@@ -1,11 +1,10 @@
 package br.ufrpe.uag
 
+import org.codehaus.groovy.grails.validation.Validateable
 
 
-import static org.springframework.http.HttpStatus.*
-import grails.transaction.Transactional
 
-
+@Validateable
 class AlunoController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
@@ -23,7 +22,6 @@ class AlunoController {
         respond new Aluno(params)
     }
 
-    @Transactional
     def save(Aluno alunoInstance) {
         if (alunoInstance == null) {
             notFound()
@@ -50,7 +48,6 @@ class AlunoController {
         respond alunoInstance
     }
 
-    @Transactional
     def update(Aluno alunoInstance) {
         if (alunoInstance == null) {
             notFound()
@@ -73,7 +70,6 @@ class AlunoController {
         }
     }
 
-    @Transactional
     def delete(Aluno alunoInstance) {
 
         if (alunoInstance == null) {
