@@ -34,4 +34,5 @@ When(~/^I add the aluno "([^"]*)" with cpf "([^"]*)"$/) { String nomeEstudante, 
 Then(~/^The aluno "([^"]*)" is not added twice$/) { String nomeEstudante ->
 	alunos = Aluno.findAllByNomeEstudante(nomeEstudante)
 	assert alunos.size() == 1
+	
 }
